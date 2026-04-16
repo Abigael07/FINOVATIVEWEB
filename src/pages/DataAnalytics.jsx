@@ -6,7 +6,7 @@ import PageHero from '../components/PageHero';
 const WA = 'https://wa.me/254708022727?text=Hello%20I%20want%20to%20enroll%20in%20the%20Data%20Analytics%20course';
 
 const learn = ['Data collection and cleaning', 'Data analysis using Excel', 'Introduction to SQL', 'Data visualization techniques', 'Building dashboards and reports', 'Basic statistics for data analysis'];
-const tools = ['Microsoft Excel', 'Power BI', 'SQL Databases','Tablaeu'];
+const tools = ['Microsoft Excel', 'Power BI', 'SQL Databases','Tableau'];
 
 export default function DataAnalytics() {
   const isMobile = useMobile();
