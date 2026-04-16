@@ -13,7 +13,7 @@ export default function Excel() {
       <PageHero
         eyebrow="Home / Excel"
         title={<>Microsoft Excel <em style={{ color: 'var(--blue-bright)', fontStyle: 'italic' }}>Mastery</em></>}
-        subtitle="Learn Excel from beginner to advanced and boost your career in 4 weeks."
+        subtitle="Learn Excel from beginner to advanced and boost your reporting analysis in 4 weeks."
         image="https://images.unsplash.com/photo-1658203897339-0b8c64a42fba?w=1200&q=70"
       />
 

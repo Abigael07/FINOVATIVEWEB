@@ -6,7 +6,7 @@ import PageHero from '../components/PageHero';
 const WA = 'https://wa.me/254708022727?text=Hello%20I%20want%20to%20enroll%20in%20the%20Data%20Analytics%20course';
 
 const learn = ['Data collection and cleaning', 'Data analysis using Excel', 'Introduction to SQL', 'Data visualization techniques', 'Building dashboards and reports', 'Basic statistics for data analysis'];
-const tools = ['Microsoft Excel', 'Power BI', 'SQL Databases'];
+const tools = ['Microsoft Excel', 'Power BI', 'SQL Databases','Tablaeu'];
 
 export default function DataAnalytics() {
   const isMobile = useMobile();
@@ -56,7 +56,7 @@ export default function DataAnalytics() {
           style={{ background: 'var(--navy-panel)', border: '1px solid var(--blue-edge)', borderRadius: 'var(--radius-md)', padding: isMobile ? '40px 28px' : '52px 60px', textAlign: 'center' }}
         >
           <p style={{ fontSize: '0.65rem', letterSpacing: '0.3em', color: 'var(--blue-bright)', textTransform: 'uppercase', fontFamily: 'var(--font-sans)', marginBottom: '12px' }}>Course Fee</p>
-          <p style={{ fontFamily: 'var(--font-serif)', fontSize: '3.2rem', fontWeight: 300, color: 'var(--white)', marginBottom: '28px', lineHeight: 1 }}>KES 8,000</p>
+          <p style={{ fontFamily: 'var(--font-serif)', fontSize: '3.2rem', fontWeight: 300, color: 'var(--white)', marginBottom: '28px', lineHeight: 1 }}>KES 20,000</p>
           <a href={WA} target="_blank" rel="noopener noreferrer">
             <motion.button whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }}
               style={{ padding: '14px 40px', background: 'var(--blue)', color: 'var(--white)', borderRadius: 'var(--radius-sm)', fontFamily: 'var(--font-sans)', fontSize: '0.78rem', fontWeight: 500, letterSpacing: '0.12em', textTransform: 'uppercase', transition: 'background 0.3s' }}
