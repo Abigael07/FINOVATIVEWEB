@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { useMobile } from '../context/MobileContext';
 import PageHero from '../components/PageHero';
@@ -46,13 +47,13 @@ export default function Excel() {
         >
           <p style={{ fontSize: '0.65rem', letterSpacing: '0.3em', color: 'var(--blue-bright)', textTransform: 'uppercase', fontFamily: 'var(--font-sans)', marginBottom: '12px' }}>Course Fee</p>
           <p style={{ fontFamily: 'var(--font-serif)', fontSize: '3.2rem', fontWeight: 300, color: 'var(--white)', marginBottom: '28px', lineHeight: 1 }}>KES 10,000</p>
-          <a href={WA} target="_blank" rel="noopener noreferrer">
+          <Link to="/enroll">
             <motion.button whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }}
               style={{ padding: '14px 40px', background: 'var(--blue)', color: 'var(--white)', borderRadius: 'var(--radius-sm)', fontFamily: 'var(--font-sans)', fontSize: '0.78rem', fontWeight: 500, letterSpacing: '0.12em', textTransform: 'uppercase', transition: 'background 0.3s' }}
               onMouseEnter={e => e.currentTarget.style.background = 'var(--blue-bright)'}
               onMouseLeave={e => e.currentTarget.style.background = 'var(--blue)'}
             >Enroll Now →</motion.button>
-          </a>
+          </Link>
         </motion.div>
       </div>
     </div>

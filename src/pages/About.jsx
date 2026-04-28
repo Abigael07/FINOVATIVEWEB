@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { useMobile } from '../context/MobileContext';
 import PageHero from '../components/PageHero';
@@ -24,7 +25,7 @@ const team = [
   { name: 'Our Values', text: 'Accuracy, transparency, and genuine care for every client. We treat your business like our own.' },
 ];
 
-const WA = 'https://wa.me/254708022727';
+// const WA = 'https://wa.me/254708022727';
 
 export default function About() {
   const isMobile = useMobile();
@@ -53,7 +54,7 @@ export default function About() {
                 viewport={{ once: true }} transition={{ delay: i * 0.1, duration: 0.7 }}
                 style={{ background: 'var(--navy)', padding: isMobile ? '36px 24px' : '48px 40px' }}
               >
-                <p style={{ fontSize: '0.6rem', letterSpacing: '0.25em', color: 'var(--blue-bright)', textTransform: 'uppercase', fontFamily: 'var(--font-sans)', marginBottom: '16px' }}>{String(i+1).padStart(2,'0')}</p>
+                <p style={{ fontSize: '0.6rem', letterSpacing: '0.25em', color: 'var(--blue-bright)', textTransform: 'uppercase', fontFamily: 'var(--font-sans)', marginBottom: '16px' }}>{String(i + 1).padStart(2, '0')}</p>
                 <h3 style={{ fontFamily: 'var(--font-serif)', fontSize: '1.4rem', fontWeight: 300, color: 'var(--white)', marginBottom: '14px' }}>{t.name}</h3>
                 <p style={{ fontSize: '0.84rem', color: 'var(--white-dim)', fontFamily: 'var(--font-sans)', lineHeight: 1.85, fontWeight: 300 }}>{t.text}</p>
               </motion.div>
@@ -98,13 +99,13 @@ export default function About() {
             <p style={{ fontFamily: 'var(--font-serif)', fontSize: isMobile ? '1.6rem' : '2.2rem', fontWeight: 300, color: 'var(--white)', marginBottom: '8px' }}>Ready to get started?</p>
             <p style={{ fontSize: '0.8rem', color: 'var(--white-dim)', fontFamily: 'var(--font-sans)' }}>Chat with us on WhatsApp — no forms, no waiting.</p>
           </div>
-          <a href={`${WA}?text=Hello%20I%20want%20to%20get%20started`} target="_blank" rel="noopener noreferrer">
+          <Link to="/contact">
             <motion.button whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }}
               style={{ padding: '15px 40px', background: 'var(--blue)', color: 'var(--white)', borderRadius: 'var(--radius-sm)', fontFamily: 'var(--font-sans)', fontSize: '0.78rem', fontWeight: 500, letterSpacing: '0.14em', textTransform: 'uppercase', whiteSpace: 'nowrap', transition: 'background 0.3s' }}
               onMouseEnter={e => e.currentTarget.style.background = 'var(--blue-bright)'}
               onMouseLeave={e => e.currentTarget.style.background = 'var(--blue)'}
-            >Get Started on WhatsApp</motion.button>
-          </a>
+            >Get Started Now</motion.button>
+          </Link>
         </div>
       </div>
     </div>

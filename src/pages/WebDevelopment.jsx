@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { useMobile } from '../context/MobileContext';
 import PageHero from '../components/PageHero';
@@ -72,13 +73,13 @@ export default function WebDevelopment() {
         <div style={{ maxWidth: '560px', margin: '0 auto' }}>
           <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: isMobile ? '2rem' : '2.4rem', fontWeight: 300, color: 'var(--white)', marginBottom: '14px' }}>Start a Project</h2>
           <p style={{ fontSize: '0.88rem', color: 'var(--white-dim)', marginBottom: '32px', lineHeight: 1.7, fontFamily: 'var(--font-sans)' }}>Tell us what you want to build and we will help you bring it to life.</p>
-          <a href={WA} target="_blank" rel="noopener noreferrer">
+          <Link to="/contact">
             <motion.button whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }}
               style={{ padding: '14px 40px', background: 'var(--blue)', color: 'var(--white)', borderRadius: 'var(--radius-sm)', fontFamily: 'var(--font-sans)', fontSize: '0.78rem', fontWeight: 500, letterSpacing: '0.12em', textTransform: 'uppercase', transition: 'background 0.3s' }}
               onMouseEnter={e => e.currentTarget.style.background = 'var(--blue-bright)'}
               onMouseLeave={e => e.currentTarget.style.background = 'var(--blue)'}
-            >Contact on WhatsApp</motion.button>
-          </a>
+            >Contact us</motion.button>
+          </Link>
         </div>
       </section>
     </div>
