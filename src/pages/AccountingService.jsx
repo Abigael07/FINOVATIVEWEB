@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { useMobile } from '../context/MobileContext';
 import PageHero from '../components/PageHero';
@@ -58,13 +59,13 @@ export default function AccountingService() {
               <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: isMobile ? '1.6rem' : '2rem', fontWeight: 300, color: 'var(--white)', marginBottom: '10px' }}>Ready to get your accounts in order?</h2>
               <p style={{ fontSize: '0.85rem', color: 'var(--white-dim)', lineHeight: 1.7, fontFamily: 'var(--font-sans)', fontWeight: 300 }}>Reach out on WhatsApp and we'll discuss the right package for your business.</p>
             </div>
-            <a href={WA} target="_blank" rel="noopener noreferrer" style={{ flexShrink: 0 }}>
+            <Link to="/enroll"> 
               <motion.button whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }}
                 style={{ padding: '14px 36px', background: 'var(--blue)', color: 'var(--white)', borderRadius: 'var(--radius-sm)', fontFamily: 'var(--font-sans)', fontSize: '0.78rem', fontWeight: 500, letterSpacing: '0.12em', textTransform: 'uppercase', whiteSpace: 'nowrap', transition: 'background 0.3s' }}
                 onMouseEnter={e => e.currentTarget.style.background = 'var(--blue-bright)'}
                 onMouseLeave={e => e.currentTarget.style.background = 'var(--blue)'}
               >Enroll Now →</motion.button>
-            </a>
+            </Link>
           </motion.div>
         </div>
       </section>

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { useMobile } from '../../context/MobileContext';
 import heroVideo from '../../assets/hero.mp4';
@@ -97,7 +98,7 @@ export default function HeroSection() {
 
         {/* CTA buttons */}
         <motion.div {...fade(0.45)} style={{ display: 'flex', gap: '14px', flexWrap: 'wrap' }}>
-          <a href={`${WA}?text=Hello%20I%20want%20to%20enroll`} target="_blank" rel="noopener noreferrer">
+          <Link to="/enroll">
             <motion.button
               whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }}
               style={{
@@ -111,7 +112,7 @@ export default function HeroSection() {
             >
               Get Started
             </motion.button>
-          </a>
+           </Link>
 
           <a href="#services">
             <motion.button

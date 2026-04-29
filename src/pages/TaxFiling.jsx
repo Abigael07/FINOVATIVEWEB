@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { useMobile } from '../context/MobileContext';
 import PageHero from '../components/PageHero';
@@ -10,7 +11,6 @@ const plans = [
   { title: 'Tax Compliance Certificate', price: 'KES 1,000', unit: 'per certificate', desc: 'Apply for your Tax Compliance Certificate quickly and without the hassle.', wa: 'https://wa.me/254708022727?text=Hello%20I%20want%20a%20tax%20compliance%20certificate', img: 'https://images.unsplash.com/photo-1562564055-71e051d33c19?w=500&q=60' },
   { title: 'Corporate Tax Filing', price: 'KES 15,000', unit: 'per return', desc: 'Comprehensive corporate tax filing — income tax, WHT, and more.', wa: 'https://wa.me/254708022727?text=Hello%20I%20want%20to%20file%20corporate%20tax', img: 'https://images.unsplash.com/photo-1598432439250-0330f9130e14?w=500&q=60' },
 ];
-
 const trust = [
   { icon: '✓', title: 'KRA Compliant', desc: 'All returns filed in full compliance with KRA regulations.' },
   { icon: '⚡', title: 'Fast Turnaround', desc: 'Most returns completed within 24 hours of submission.' },
@@ -58,13 +58,13 @@ export default function TaxFiling() {
                   <p style={{ fontFamily: 'var(--font-serif)', fontSize: '1.8rem', fontWeight: 300, color: 'var(--blue-bright)', marginBottom: '4px', lineHeight: 1 }}>{plan.price}</p>
                   <p style={{ fontSize: '0.72rem', color: 'var(--white-dim)', marginBottom: '14px', fontFamily: 'var(--font-sans)' }}>/ {plan.unit}</p>
                   <p style={{ fontSize: '0.82rem', color: 'var(--white-dim)', lineHeight: 1.6, marginBottom: '20px', fontFamily: 'var(--font-sans)' }}>{plan.desc}</p>
-                  <a href={plan.wa} target="_blank" rel="noopener noreferrer">
+                  <Link to="/returns">
                     <motion.button whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }}
                       style={{ padding: '10px 28px', background: 'var(--blue)', color: 'var(--white)', borderRadius: '24px', fontFamily: 'var(--font-sans)', fontSize: '0.82rem', fontWeight: 500, transition: 'background 0.2s' }}
                       onMouseEnter={e => e.currentTarget.style.background = 'var(--blue-bright)'}
                       onMouseLeave={e => e.currentTarget.style.background = 'var(--blue)'}
                     >File Now →</motion.button>
-                  </a>
+                  </Link>
                 </div>
               </motion.div>
             ))}

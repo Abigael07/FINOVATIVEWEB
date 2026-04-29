@@ -11,6 +11,8 @@ import TaxFiling from './pages/TaxFiling';
 import AccountingService from './pages/AccountingService';
 import About from './pages/About';
 import Contact from './pages/Contact';
+import Enrollform from './components/forms/EnrollForm';
+import Taxfiling from './components/forms/TaxfillingForm';
 
 function App() {
   return (
@@ -27,6 +29,8 @@ function App() {
             <Route path="/accounting-service" element={<AccountingService />} />
             <Route path="/about"              element={<About />} />
             <Route path="/contact"            element={<Contact />} />
+            <Route path="/enroll"             element={<Enrollform />} />
+            <Route path="/returns"            element={<Taxfiling />} />
           </Routes>
         </main>
         <Footer />
