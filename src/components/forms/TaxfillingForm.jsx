@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
+import { useSearchParams } from 'react-router-dom'; // ← reads ?type= from URL
 import { motion, AnimatePresence } from 'framer-motion';
 import emailjs from '@emailjs/browser';
 import { useMobile } from '../../context/MobileContext';
 import { EMAILJS_CONFIG, BUSINESS_EMAIL } from '../../emailjs.config';
+
 const FILING_TYPES = [
   'Individual Income Tax Return',
   'Business / Corporate Tax Return',
@@ -42,13 +44,17 @@ const labelStyle = {
 // ── Component ────────────────────────────────────────────────────────────────
 export default function TaxFilingForm() {
   const isMobile = useMobile();
+  const [searchParams] = useSearchParams();
+
+  // Pre-fill filing type when arriving from a pricing card (/file-now?type=...)
+  const preselectedType = searchParams.get('type') || '';
 
   const [form, setForm] = useState({
     fullName: '',
     kraPin: '',
     email: '',
     phone: '',
-    filingType: '',
+    filingType: preselectedType,
     taxYear: '2024',
     notes: '',
   });

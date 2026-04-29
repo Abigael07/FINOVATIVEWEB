@@ -1,20 +1,18 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom'; // ← added
 import { motion } from 'framer-motion';
 import { useMobile } from '../../context/MobileContext';
 import heroVideo from '../../assets/hero.mp4';
 
-const WA = 'https://wa.me/254708022727';
-
 const pillars = [
-  { label: 'Clients Served',   value: '200+' },
-  { label: 'Satisfaction Rate', value: '98%' },
-  { label: 'Years Experience',  value: '8+' },
+  { label: 'Clients Served',    value: '200+' },
+  { label: 'Satisfaction Rate', value: '98%'  },
+  { label: 'Years Experience',  value: '8+'   },
 ];
 
 const fade = (delay = 0) => ({
-  initial: { opacity: 0, y: 30 },
-  animate: { opacity: 1, y: 0 },
+  initial:    { opacity: 0, y: 30 },
+  animate:    { opacity: 1, y: 0  },
   transition: { duration: 0.9, delay },
 });
 
@@ -41,7 +39,7 @@ export default function HeroSection() {
         }}
       />
 
-      {/* ── Dark gradient overlay over video ── */}
+      {/* ── Dark gradient overlay ── */}
       <div style={{
         position: 'absolute', inset: 0,
         background: 'linear-gradient(135deg, var(--navy) 0%, rgba(6,13,31,0.6) 55%, rgba(30,111,196,0.15) 100%)',
@@ -96,8 +94,10 @@ export default function HeroSection() {
           Master Excel, accounting, and data analytics — skills that drive careers and transform businesses.
         </motion.p>
 
-        {/* CTA buttons */}
+        {/* ── CTA buttons ── */}
         <motion.div {...fade(0.45)} style={{ display: 'flex', gap: '14px', flexWrap: 'wrap' }}>
+
+          {/* Get Started → /enroll */}
           <Link to="/enroll">
             <motion.button
               whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }}
@@ -105,15 +105,16 @@ export default function HeroSection() {
                 padding: '14px 36px', background: 'var(--blue)', color: 'var(--white)',
                 borderRadius: 'var(--radius-sm)', fontFamily: 'var(--font-sans)',
                 fontSize: '0.78rem', fontWeight: 500, letterSpacing: '0.12em',
-                textTransform: 'uppercase', transition: 'background 0.3s',
+                textTransform: 'uppercase', transition: 'background 0.3s', border: 'none',
               }}
               onMouseEnter={e => e.currentTarget.style.background = 'var(--blue-bright)'}
               onMouseLeave={e => e.currentTarget.style.background = 'var(--blue)'}
             >
               Get Started
             </motion.button>
-           </Link>
+          </Link>
 
+          {/* Our Services — scroll anchor, unchanged */}
           <a href="#services">
             <motion.button
               whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }}

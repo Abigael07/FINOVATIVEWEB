@@ -30,7 +30,7 @@ function App() {
             <Route path="/about"              element={<About />} />
             <Route path="/contact"            element={<Contact />} />
             <Route path="/enroll"             element={<Enrollform />} />
-            <Route path="/returns"            element={<Taxfiling />} />
+            <Route path="/file-now"            element={<Taxfiling />} />
           </Routes>
         </main>
         <Footer />

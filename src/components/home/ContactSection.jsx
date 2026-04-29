@@ -56,7 +56,7 @@ export default function ContactSection() {
             onMouseEnter={e => e.currentTarget.style.background = 'var(--blue-bright)'}
             onMouseLeave={e => e.currentTarget.style.background = 'var(--blue)'}
           >
-            talk to us
+            Send a Message
           </motion.button>
         </Link>
       </div>
